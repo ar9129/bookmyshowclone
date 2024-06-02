@@ -11,7 +11,6 @@ import lombok.NoArgsConstructor;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Timer;
 
 @Entity
 @Data
@@ -37,7 +36,7 @@ public class Show {
     @JoinColumn(name= "movie_id")
     private  Movie movie ;
 
-    @OneToMany(mappedBy = "shows", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "show", cascade = CascadeType.ALL)
     private List<Seat> seats = new ArrayList<>() ;
 
 

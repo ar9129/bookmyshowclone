@@ -1,13 +1,12 @@
 package com.example.bookmyshow.entity;
 
-import jakarta.annotation.Nullable;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 
@@ -27,7 +26,7 @@ public class City {
 
     private String state ;
 
-    @OneToMany(mappedBy="cities", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy="city", cascade = CascadeType.ALL)
     private List<Theatre> theatres = new ArrayList<>() ;
 
 

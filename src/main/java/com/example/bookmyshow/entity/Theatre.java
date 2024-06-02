@@ -28,7 +28,7 @@ public class Theatre {
     private  City city ;
 
 
-    @OneToMany(mappedBy = "theatres", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "theatre", cascade = CascadeType.ALL)
     private List<Movie> movies = new ArrayList<>() ;
 
 

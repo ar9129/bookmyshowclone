@@ -38,7 +38,7 @@ public class Movie {
     @JoinColumn(name = "theatre_id")
     private Theatre theatre ;
 
-    @OneToMany(mappedBy = "movies" , cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "movie" , cascade = CascadeType.ALL)
     private List<Show>shows = new ArrayList<>() ;
 
 
