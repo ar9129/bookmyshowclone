@@ -10,7 +10,9 @@ import java.util.List;
 public interface MovieRespository extends JpaRepository<Movie, Long> {
 
     List<Movie>findByTheatreIn(List<Theatre> theatre) ;
-
+    List<Movie>findByTheatre_City_NameANDLanguageANDGenre(String cityname, String language, String genre) ;
+    List<Movie>findByTheatre_City_NameANDLanguage(String citynmae, String language) ;
+    List<Movie>findByTheatre_City_NameANDGenre(String cityname, String genre) ;
 
 
 

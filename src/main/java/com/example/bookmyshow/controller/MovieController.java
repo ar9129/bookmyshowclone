@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
+import java.util.Optional;
 
 public class MovieController {
 
@@ -18,8 +19,8 @@ public class MovieController {
     }
 
     @GetMapping({"/city/{cityname}"})
-    public ResponseEntity<List<Movie>> getMoviesbyCity(@RequestParam String cityname){
-        return  ResponseEntity.ok().body(movieService.getMoviesbyCity(cityname)) ;
+    public ResponseEntity<List<Movie>> getMoviesbyCity(@RequestParam String cityname, @RequestParam Optional<String>language,@RequestParam Optional<String>genre){
+        return  ResponseEntity.ok().body(movieService.getMoviesbyCity(cityname,language,genre)) ;
     }
 
 
